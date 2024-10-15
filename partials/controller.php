@@ -25,10 +25,10 @@ if (isset($_POST['admin_login'])) {
                 $_SESSION['email'] = $login_email;
                 header("Location: ../admin/admin.php");
             } else {
-                echo "Cookie və session dəyərləri fərqlidir.";
+                echo "istifadeci adi yanlisdi";
             }
         } else {
-            echo "Cookie və ya session məlumatı mövcud deyil.";
+            echo "Istifadeci tapilmadi";
         }
 
 
