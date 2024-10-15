@@ -10,7 +10,7 @@
         <nav id="navmenu" class="navmenu">
             <ul>
                 <li><a href="index.php" class="active">Home</a></li>
-                <li><a href="">Admin</a></li>
+                <li><a href="../admin/admin.php">Admin</a></li>
                 <!-- <li><a href="#about">About</a></li>
                 <li><a href="#services">Services</a></li>
                 <li><a href="#portfolio">Portfolio</a></li>
@@ -40,27 +40,8 @@
             <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
         </nav>
 
-        <a class="btn-getstarted" href="">Login</a>
+        <a class="btn-getstarted" href="../profil/login.php">Login</a>
         <a class="btn-getstarted" href="../profil/register.php"> Register</a>
 
     </div>
 </header>
-<?php
-session_start(); // Session-u başladır
-
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $login_email = $_POST['email'];
-    $login_password = $_POST['password'];
-
-    if (isset($_COOKIE['email'])) {
-
-        $admin_email = $_COOKIE['email'];
-    }
-    if ($login_email == $admin_email) {
-        $_SESSION['email'] = $admin_email; // Session-da məlumatları saxla
-        header("Location: ../admin/admin.php"); // Yönləndirmə
-
-    }
-
-}
-?>
