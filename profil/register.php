@@ -5,6 +5,10 @@
     <form action="../partials/controller.php" method="POST">
         <div class="form-row">
             <div class="form-group col-md-6">
+                <label for="inputEmail4">AdSoyad</label>
+                <input type="text" name="name" class="form-control" id="name">
+            </div>
+            <div class="form-group col-md-6">
                 <label for="inputEmail4">Email</label>
                 <input type="email" name="email" class="form-control" id="inputEmail4" placeholder="Email">
             </div>

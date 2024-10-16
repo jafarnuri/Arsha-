@@ -39,9 +39,15 @@
             </ul>
             <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
         </nav>
+        <?php
 
-        <a class="btn-getstarted" href="../profil/login.php">Login</a>
-        <a class="btn-getstarted" href="../profil/register.php"> Register</a>
+        if (!isset($_SESSION['email'])) { ?>
+
+            <a class="btn-getstarted" href="../profil/login.php">Login</a>
+            <a class="btn-getstarted" href="../profil/register.php"> Register</a>
+            <?php
+        }
+        ?>
 
     </div>
 </header>
